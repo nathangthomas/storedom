@@ -8,7 +8,7 @@ describe "ActiveRecord American Gladiator" do
       Item.create(name: "Crash Pad", status: "inactive")
 
       # Changeable Start
-    #  items = Item.unscoped.all
+    items = Item.unscoped.all
       # Changeable End
 
       expect(items.count).to eq 3
@@ -22,7 +22,7 @@ describe "ActiveRecord American Gladiator" do
       Item.create(name: "Trap Door")
 
       # Changeable Start
-      #items = Item.where("name like?", "%Powerball%")
+      items = Item.where("name like?", "%Powerball%")
       # Changeable End
 
       expect(items.count).to eq(2)
